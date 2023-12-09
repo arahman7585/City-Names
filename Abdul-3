@@ -1,0 +1,18 @@
+from queue import PriorityQueue
+
+# Creating a Priority Queue from the queue module
+priority_queue = PriorityQueue()
+
+# Adding an Elements
+# Elements are tuples with (priority, city_names) format
+priority_queue.put((2, ["New York", "London", "Tokyo"]))
+priority_queue.put((5, ["Paris", "Berlin", "Sydney"]))
+priority_queue.put((1, ["Rome", "Rio de Janeiro", "Cairo"]))
+
+# Popping an element
+# Highest priority element is retrieved first
+if not priority_queue.empty():
+    popped_element = priority_queue.get()
+    print(f"Popped element: (priority: {popped_element[0]}, city_names: {popped_element[1]})")
+else:
+    print("Priority Queue is empty.")
